@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" type="image/gif/png" href="assets/iicon.png">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border fixed-top p-0,20">
+            <div class="container justify-content-center mb-1">
+                <div class="d-flex flex-row justify-content-between align-item-center col-9">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/logo.png">
+                    </a>
+                    <div>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </div>
+                    <div>
+                        <ul class="list-inline m-0">
+                            <li class="list-inline-item">
+                                <a href="#" class="link-menu">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-house" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                                <a href="#" class="link-menu">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-messenger" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                                <a href="#" class="link-menu">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-compass" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item ml-2">
+                                <a href="#" class="link-menu">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item align-middle ml-2">
+                                <a href="#">
+                                    <div
+                                        class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center topbar-profile-photo">
+                                        <img src="assets/img/profiles/profile-1.jpg"
+                                            style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mt-4">
+        <div class="container d-flex justify-content-center mt-5">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-8">
+                        <!-- Start Stories -->
+                        <div class="card mt-5">
+                            <div class="card-body d-flex justify-content-start ">
+                                <ul class="list-inline mb-0">
+                                    <list class="list-inline-item ">
+                                        <button class="btn m-0 p-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="assets/img/profiles/profile-1.jpg"
+                                                        style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                                </div>
+                                                <small>melisaboyok</small>
+                                        </button>
+                                    </list>
+                                    <list class="list-inline-item ">
+                                        <button class="btn m-0 p-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="assets/img/profiles/profile-2.jpg"
+                                                        style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                                </div>
+                                                <small>karamel_luna</small>
+                                        </button>
+                                    </list>
+                                    <list class="list-inline-item ">
+                                        <button class="btn m-0 p-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="assets/img/profiles/profile-3.jfif"
+                                                        style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                                </div>
+                                                <small>nazlı.pati</small>
+                                        </button>
+                                    </list>
+                                    <list class="list-inline-item ">
+                                        <button class="btn m-0 p-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="assets/img/profiles/profile-4.jpg"
+                                                        style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                                </div>
+                                                <small>sutlac</small>
+                                        </button>
+                                    </list>
+                                    <list class="list-inline-item ">
+                                        <button class="btn m-0 p-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="assets/img/profiles/profile-5.jpg"
+                                                        style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                                </div>
+                                                <small>sirine-akgl</small>
+                                        </button>
+                                    </list>
+                                    <list class="list-inline-item ">
+                                        <button class="btn m-0 p-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="assets/img/profiles/profile-6,.png"
+                                                        style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                                </div>
+                                                <small>leydi</small>
+                                        </button>
+                                    </list>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Stories -->
+                        <!-- Start Posts -->
+                        <div class="d-flex flex-column mt-4 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="d-flex flex row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger post-profile-photo mr-3">
+                                            <img src="assets/img/profiles/profile-1.jpg"
+                                                style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                            ">
+                                        </div>
+                                        <span class="font-weight-bold">melisaboyok</span>
+                                        
+                                    </div>
+                                    <div class="d-flex justify-content-end"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16"> <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" /> </svg> </div>
+                                </div>
+                           
+                                <div class="card-body p-0">
+                                    <div class="embed-responsive embed-responsive-1by1">
+                                        <img class="embed-responsive-item" src="assets/img/posts/post-1.jpg">
+                                    </div>
+                                    <div class="d-flex justify-content-between pl-3 pr-3 pt-3 pb-1">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item ">
+                                                <button class="btn p-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <button class="btn p-0 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-arrow-up-right-square"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div>
+                                            <button class="btn p-0">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 pr-3 pb-2">
+                                        <strong class="d-block">2.500 likes</strong>
+                                        <strong class="d-block">melisaboyok</strong>
+                                        <p class="mb-1">👉👈</p>
+                                        <button class="btn p-0">
+                                            <span class="text-muted">76 yorumun tümünü gör</span>
+                                        </button>
+                                        <div>
+                                            <strong class="d-block">senem_akl</strong>
+                                            <span>❄️</span>
+                                        </div>
+                                        <div>
+                                            <strong class="d-block">akif_tkl</strong>
+                                            <span>🦌❄️</span>
+                                        </div>
+                                        <small class="text-muted">3 SAAT ONCE</small>
+                                    </div>
+                                    <div class="position-relative comment-box">
+                                        <form>
+                                            <input class="w-100 border-0 p-3 " placeholder="Yorum ekle">
+                                            <button class="btn btn-primary position-absolute btn-ig">Paylaş</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header">
+                                    <div class="d-flex flex row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger post-profile-photo mr-3">
+                                            <img src="assets/img/profiles/profile-6,.png"
+                                                style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                            ">
+                                        </div>
+                                        <span class="font-weight-bold">leydi</span>
+                                    </div>
+                                    <div class="d-flex  align-self-start justify-content-end "> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16"> <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" /> </svg> </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="embed-responsive embed-responsive-1by1">
+                                        <img class="embed-responsive-item" src="assets/img/posts/post-2.jpg">
+                                    </div>
+                                    <div class="d-flex justify-content-between pl-3 pr-3 pt-3 pb-1">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item ">
+                                                <button class="btn p-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <button class="btn p-0 ml-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-arrow-up-right-square"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div>
+                                            <button class="btn p-0">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 pr-3 pb-2">
+                                        <strong class="d-block">50 likes</strong>
+                                        <strong class="d-block">leydi
+                                        </strong>
+                                        <p class="mb-1">😻😻</p>
+                                        <button class="btn p-0">
+                                            <span class="text-muted">9 yorumun tümünü gör</span>
+                                        </button>
+                                        <div>
+                                            <strong class="d-block">senem_akl</strong>
+                                            <span>😊</span>
+                                        </div>
+                                        <div>
+                                            <strong class="d-block">akif_tkl</strong>
+                                            <span>👏</span>
+                                        </div>
+                                        <small class="text-muted">3 SAAT ONCE</small>
+                                    </div>
+                                    <div class="position-relative comment-box border">
+                                        <form>
+                                            <input class="w-100 border-0 p-3 " placeholder="Yorum ekle">
+                                            <button class="btn btn-primary position-absolute btn-ig">Paylaş</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Posts -->
+                    </div>
+                    <div class="col-4 mt-5">
+                        <div class="d-flex flex-row align-items-center">
+                            <div
+                                class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border side-profile-foto">
+                                <img src="assets/img/profiles/profile-1.jpg"
+                                    style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                            </div>
+                            <div class="ml-3">
+                                <span class="profile-info-username">melisaboyok</span>
+                                <span class="profile-info-name">Melisa</span>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex flex-row justify-content-between">
+                                <small>Senin için öneriler</small>
+                                <small>Tümünü gör</small>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row justify-content-between  mt-3 mb-3">
+                                    <div class="d-lex flex-row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center  align-items-center border border-danger suggest-profile-foto">
+                                            <img src="assets/img/profiles/profile-7.jfif"
+                                                style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                        </div>
+                                        <strong class="ml-2">Instagram</strong>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm p-0 btn-ig">
+                                        Takip et
+                                    </button>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between  mt-3 mb-3">
+                                    <div class="d-lex flex-row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center  align-items-center border border-danger suggest-profile-foto">
+                                            <img src="assets/img/profiles/profile-8.jpg"
+                                                style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                        </div>
+                                        <strong class="ml-2">Instagram</strong>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm p-0 btn-ig">
+                                        Takip et
+                                    </button>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between  mt-3 mb-3">
+                                    <div class="d-lex flex-row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center  align-items-center border border-danger suggest-profile-foto">
+                                            <img src="assets/img/profiles/profile-9.jpg"
+                                                style="transform: scale(1.5); width:100%; position:absolute; left:0" />
+                                        </div>
+                                        <strong class="ml-2">Instagram</strong>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm p-0 btn-ig">
+                                        Takip et
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
